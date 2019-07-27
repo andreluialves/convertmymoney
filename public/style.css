@@ -1,0 +1,57 @@
+/* Sticky footer and form styles
+-------------------------------------------------- */
+  body {
+    background: #eeebeb!important;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    text-align: center;
+    color: #333333!important;
+  }
+  
+.form-convert {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-convert .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.form-convert .form-control:focus {
+  z-index: 2;
+}
+
+input:focus, button:focus {
+  border-color: rgba(165, 163, 163, 0.8)!important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(165, 163, 163, 0.8)!important;
+  outline: 0 none;
+}
+
+.form-convert input {
+  margin: 25px 0 25px 0;
+  padding: 15px;
+  border: 1px solid #666666;
+}
+
+/*.form-convert input[type="password"] {
+  margin: 25px 0 25px 0;
+  padding: 15px;
+  border: 1px solid #666666;
+}*/
+
+button {
+  background: rgb(203, 203, 204)!important;
+  color: #111111!important;
+  border: 1px solid #666666!important;
+}

@@ -1,0 +1,9 @@
+<%- include('header') %>
+<div class="text-center mt-5 p-3 border border-secondary border-left-0 border-right-0">
+    <% if(error) { %>
+        <%= error %>
+    <% } else { %>
+        US$ <%= quantidade %> (dólares) na cotação <%= cotacao %> é igual a: R$ <%= conversao %>.
+    <% } %>
+</div>
+<%- include('footer') %>
