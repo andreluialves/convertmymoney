@@ -10,6 +10,9 @@ const path = require('path');
 //Importanto o arquivo de conversão
 const convert = require('./lib/convert');
 
+//Criando uma variável de ambiente para autorizar uma configuração externa da porta de comunicação
+const port = env.PORT || 3000;
+
 //Chamando o Ejs como view engine
 app.set ('view engine', 'ejs');
 
@@ -43,7 +46,7 @@ app.get ('/cotacao', (req, res) => {
 });
 
 //Criando um servidor
-app.listen(3000, err => {
+app.listen(port, err => {
     if (err) {
         console.log('Opa, não foi possível iniciar.')
     }
