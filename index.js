@@ -7,11 +7,11 @@ const app = express();
 //Importanto o path
 const path = require('path');
 
-//Importanto o arquivo de conversão
+//Importanto o módulo de conversão
 const convert = require('./lib/convert');
 
-//Criando uma variável de ambiente para autorizar uma configuração externa da porta de comunicação
-//const port = env.PORT || 3000;
+//Importanto o módulo de conversão
+const apiBCB = require('./lib/api-bcb');
 
 //Chamando o Ejs como view engine
 app.set ('view engine', 'ejs');
@@ -23,8 +23,11 @@ app.set ('views', path.join(__dirname, 'views'));
 app.use (express.static(path.join(__dirname, 'public')));
 
 //Determinar a resposta da requisição de acesso a aplicação seja a página home.ejs
-app.get ('/', (req, res) => {
-    res.render ('home')
+app.get ('/', async(req, res) => {
+    const cotacao = await apiBCB.getCotacao()
+    res.render ('home', {
+        cotacao
+    })
 });
 
 //Determinar a resposta da requisição de acesso a URL /cotacao seja a página home.ejs

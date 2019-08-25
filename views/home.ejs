@@ -1,6 +1,6 @@
 <%- include('header') %>
 <form class="form-convert mt-5" method="GET" action="/cotacao">
-        <input name="cotacao" class="form-control" placeholder="Cotação dólar" required autofocus>
+        <input name="cotacao" class="form-control" placeholder="Cotação dólar" value="<%= cotacao %>" required autofocus>
         <input name="quantidade" class="form-control" placeholder="Quantidade de dólares" required autofocus>
         <button class="btn btn-lg btn-block" type="submit">Conveter!</button>
 </form>
